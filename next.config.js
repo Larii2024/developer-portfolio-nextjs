@@ -1,15 +1,17 @@
-const dotenv = require('dotenv')
-dotenv.config()
+const dotenv = require('dotenv');
+dotenv.config();
 
 const nextConfig = {
-  reactStrictMode: true, // enabled react-strict mode
+  reactStrictMode: true, // Enabled React Strict Mode
 
   images: {
-    domains: [
-      'i.ibb.co',
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+      },
     ],
   },
-
 };
 
 module.exports = nextConfig;

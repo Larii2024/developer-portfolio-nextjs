@@ -5,7 +5,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { SingleProject } from '../../components';
 import Link from '../../components/link';
 import { ThemeContext } from '../../contexts/theme-context';
-import { projectsData } from '../../data/projectsData';
+import { projectsData } from '../../data/projects-data';
 
 function ProjectPage() {
     const [search, setSearch] = useState('')
