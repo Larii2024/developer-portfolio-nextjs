@@ -1,6 +1,5 @@
 import React from 'react';
-import {
-  About, Blog, Contacts, Education,
+import { Blog, Contacts, Education,
   Experience, Landing, Navbar, Projects, Skills
 } from '../components';
 import BackToTop from '../components/back-to-top/back-to-top';
@@ -14,7 +13,6 @@ function HomePage({ blogs }) {
       <ChangeTheme />
       <Navbar />
       <Landing />
-      <About />
       <Experience />
       <Skills />
       <Projects />

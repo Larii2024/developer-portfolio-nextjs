@@ -115,12 +115,12 @@ function Landing() {
                         <p>{headerData.desciption}</p>
 
                         <div className={styles.lcrButtonContainer}>
-                            {headerData.resumePdf && (
+                            
                                 <a
-                                    href={headerData.resumePdf}
-                                    download='resume'
+                                    href='/Larina_Maskren_Resume.pdf'
+                                    download='Larina_Maskren_Resume.pdf'
                                     target='_blank'
-                                    rel='noreferrer'
+                                    rel='noopener noreferrer'
                                 >
                                     <button
                                         className="sm:w-[180px] text-[#1D9BF0] 
@@ -130,10 +130,9 @@ function Landing() {
                                         hover:bg-[#8B98A5] hover:text-[#15202B]
                                          hover:border-[#8B98A5] "
                                     >
-                                        Download CV
+                                        Download Resume
                                     </button>
                                 </a>
-                            )}
                             <Link
                                 href='/#contacts'
                             >

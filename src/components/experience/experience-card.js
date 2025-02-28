@@ -6,23 +6,21 @@ import expImgWhite from '../../assets/svg/experience/expImgWhite.svg';
 import { ThemeContext } from '../../contexts/theme-context';
 import styles from '../../styles/experience.module.css';
 
-
 function ExperienceCard({ id, company, jobtitle, startYear, endYear }) {
-
     const { theme } = useContext(ThemeContext);
-
-
 
     return (
         <Fade bottom>
             <div key={id} className={`${styles.experienceCard} bg-[#1E2732]`}>
                 <div className={styles.expcardImg} style={{ backgroundColor: theme.primary }}>
-                    <Image src={theme.type === 'light' ? expImgBlack : expImgWhite} alt="" />
+                    <Image src={theme.type === 'light' ? expImgBlack : expImgWhite} alt="" width={36} height={36} />
                 </div>
                 <div className={styles.experienceDetails}>
+                    <div className={styles.jobInfo}>
+                        <h4 style={{ color: theme.tertiary }}>{jobtitle}</h4>
+                        <h5 style={{ color: theme.tertiary }}>{company}</h5>
+                    </div>
                     <h6 style={{ color: theme.primary }}>{startYear}-{endYear}</h6>
-                    <h4 style={{ color: theme.tertiary }}>{jobtitle}</h4>
-                    <h5 style={{ color: theme.tertiary }}>{company}</h5>
                 </div>
             </div>
         </Fade>
