@@ -15,6 +15,7 @@ import dart from '../assets/svg/skills/dart.svg'
 import deno from '../assets/svg/skills/deno.svg'
 import django from '../assets/svg/skills/django.svg'
 import docker from '../assets/svg/skills/docker.svg'
+import expressjs from '../assets/svg/skills/expressjs.svg'
 import firebase from '../assets/svg/skills/firebase.svg'
 import gcp from '../assets/svg/skills/gcp.svg'
 import gimp from '../assets/svg/skills/gimp.svg'
@@ -34,6 +35,7 @@ import memsql from '../assets/svg/skills/memsql.svg'
 import mongoDB from '../assets/svg/skills/mongoDB.svg'
 import mysql from '../assets/svg/skills/mysql.svg'
 import nextJS from '../assets/svg/skills/nextJS.svg'
+import nodejs from '../assets/svg/skills/nodejs.svg'
 import nginx from '../assets/svg/skills/nginx.svg'
 import numpy from '../assets/svg/skills/numpy.svg'
 import nuxtJS from '../assets/svg/skills/nuxtJS.svg'
@@ -87,6 +89,8 @@ export const skillsImage = (skill) => {
             return photoshop;
         case 'docker':
             return docker;
+        case 'express js':
+            return expressjs;
         case 'illustrator':
             return illustrator;
         case 'adobe xd':
@@ -101,6 +105,8 @@ export const skillsImage = (skill) => {
             return javascript;
         case 'next js':
             return nextJS;
+        case 'node js':
+            return nodejs;
         case 'nuxt js':
             return nuxtJS;
         case 'react':
