@@ -15,9 +15,11 @@ function Contacts() {
     const [message, setMessage] = useState('');
     const [success, setSuccess] = useState(false);
     const [errMsg, setErrMsg] = useState('');
+    const [loading, setLoading] = useState(false);
+
     const form = useRef();
     const { theme } = useContext(ThemeContext);
-
+    console.log(process.env);
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -25,61 +27,42 @@ function Contacts() {
         setOpen(false);
     };
 
-    const handleContactForm = (e) => {
-        e.preventDefault(); // Prevent the default form submission
+   const handleContactForm = (e) => {
+    e.preventDefault();
 
-        if (name && email && message) {
-            if (isEmail(email)) {
-                emailjs.sendForm(
-                    process.env.REACT_APP_YOUR_SERVICE_ID,
-                    process.env.REACT_APP_YOUR_TEMPLATE_ID,
-                    form.current,
-                    process.env.REACT_APP_YOUR_PUBLIC_KEY
-                ).then((result) => {
-                    console.log('Email successfully sent');
-                    setSuccess(true);
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                }, (error) => {
-                    console.log('Failed to send email:', error.text);
-                });
-            } else {
-                setErrMsg('Invalid email');
-            }
-        } else {
-            setErrMsg('Please fill in all fields');
-        }
-    };
-    // const handleContactForm = (e) => {
-    //     e.preventDefault();
+    if (!name || !email || !message) {
+        setErrMsg('Please fill in all fields');
+        setOpen(true);
+        return;
+    }
 
-    //     if (name && email && message) {
-    //         if (isEmail(email)) {
-    //             emailjs.sendForm(
-    //                 process.env.REACT_APP_YOUR_SERVICE_ID,
-    //                 process.env.REACT_APP_YOUR_TEMPLATE_ID,
-    //                 form.current, process.env.REACT_APP_YOUR_PUBLIC_KEY)
-    //                 .then((result) => {
-    //                     console.log('success');
-    //                     setSuccess(true);
-    //                     setErrMsg('');
-    //                     setName('');
-    //                     setEmail('');
-    //                     setMessage('');
-    //                     setOpen(false);
-    //                 }, (error) => {
-    //                     console.log(error.text);
-    //                 });
-    //         } else {
-    //             setErrMsg('Invalid email');
-    //             setOpen(true);
-    //         }
-    //     } else {
-    //         setErrMsg('Enter all the fields');
-    //         setOpen(true);
-    //     }
-    // };
+    if (!isEmail(email)) {
+        setErrMsg('Invalid email');
+        setOpen(true);
+        return;
+    }
+       console.log(form.current);
+
+       setLoading(true);
+    emailjs.sendForm(
+        process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
+        process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY, 
+    ).then((result) => {
+        setSuccess(true);
+        setName('');
+        setEmail('');
+        setMessage('');
+        setErrMsg('Email successfully sent');
+        setLoading(false);
+        setOpen(true);
+    }, (error) => {
+        setErrMsg('Failed to send email: ' + error.text);
+        setLoading(false);
+        setOpen(true);
+    });
+};
 
     return (
         <div
@@ -94,11 +77,14 @@ function Contacts() {
                         <form ref={form} onSubmit={handleContactForm}>
                             <div className={styles.inputContainer}>
                                 <label htmlFor='Name'
-                                    className="bg-[#15202B] text-[#EFF3F4] 
+                                    className="
                                 font-semibold text-[0.9rem] py-0 px-[5px] 
-                                inline-flex translate-x-[25px] translate-y-[50%]">
+                                inline-flex translate-x-[25px] translate-y-[50%]"
+                                    style={{backgroundColor:theme.quaternary, color:theme.tertiary}}
+                                >
                                     Name
                                 </label>
+                              
                                 <input
                                     placeholder='John Doe'
                                     value={name}
@@ -106,18 +92,20 @@ function Contacts() {
                                     type='text'
                                     name='user_name'
                                     className={`${styles.formInput}  
-                                    border-2 border-[#8B98A5] bg-[#15202B]
+                                    border-2 border-[#8B98A5]
                                      text-[#EFF3F4] font-medium transition 
                                      focus:border-[#1D9BF0]`}
+                                    style={{ backgroundColor: theme.quaternary }}
                                 />
                             </div>
                             <div className={styles.inputContainer}>
                                 <label
                                     htmlFor='Email'
-                                    className="bg-[#15202B] text-[#EFF3F4] 
+                                    className=" 
                                     font-semibold text-[0.9rem] px-[5px] 
                                     inline-flex translate-x-[25px] 
                                     translate-y-[50%]"
+                                    style={{backgroundColor:theme.quaternary, color:theme.tertiary}}
                                 >
                                     Email
                                 </label>
@@ -128,18 +116,20 @@ function Contacts() {
                                     type='email'
                                     name='user_email'
                                     className={`${styles.formInput}  
-                                    border-2 border-[#8B98A5] bg-[#15202B]
+                                    border-2 border-[#8B98A5] 
                                      text-[#EFF3F4] font-medium transition
                                       focus:border-[#1D9BF0]`}
+                                    style={{ backgroundColor: theme.quaternary }}
                                 />
                             </div>
                             <div className={styles.inputContainer}>
                                 <label
                                     htmlFor='Message'
-                                    className="bg-[#15202B] text-[#EFF3F4]
+                                    className="
                                      font-semibold text-[0.9rem] px-[5px] 
                                      inline-flex translate-x-[25px] 
                                      translate-y-[50%]"
+                                    style={{backgroundColor:theme.quaternary, color:theme.tertiary}}
                                 >
                                     Message
                                 </label>
@@ -151,36 +141,31 @@ function Contacts() {
                                     name='message'
                                     className={`${styles.formMessage} 
                                     border-2 border-[#8B98A5] 
-                                    focus:border-[#1D9BF0] bg-[#15202B]
+                                    focus:border-[#1D9BF0]
                                      text-[#EFF3F4] font-medium transition`}
+                                    style={{ backgroundColor: theme.quaternary }}
                                 />
                             </div>
 
                             <div className={styles.submitBtn}>
                                 <button
                                     type='submit'
-                                    className="bg-[#1D9BF0] 
-                                    hover:bg-[#8B98A5] text-[#15202B]
-                                     transition delay-200 ">
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                    className="bg-[#1D9BF0] hover:bg-[#8B98A5] text-[#15202B] transition delay-200"
+                                    disabled={loading}
+                                >
+                                    <p>{loading ? 'Sending...' : success ? 'Sent' : 'Send'}</p>
                                     <div className={styles.submitIcon}>
                                         <AiOutlineSend
                                             className={styles.sendIcon}
                                             style={{
-                                                animation: !success
-                                                    ? 'initial'
-                                                    : 'fly 0.8s linear both',
-                                                position: success
-                                                    ? 'absolute'
-                                                    : 'initial',
+                                                animation: !success ? 'initial' : 'fly 0.8s linear both',
+                                                display: !success ? 'inline-flex' : 'none',
                                             }}
                                         />
                                         <AiOutlineCheckCircle
                                             className={styles.successIcon}
                                             style={{
-                                                display: !success
-                                                    ? 'none'
-                                                    : 'inline-flex',
+                                                display: !success ? 'none' : 'inline-flex',
                                                 opacity: !success ? '0' : '1',
                                             }}
                                         />

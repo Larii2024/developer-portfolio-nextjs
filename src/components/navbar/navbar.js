@@ -2,17 +2,15 @@ import Drawer from '@material-ui/core/Drawer';
 import React, { useContext, useState } from 'react';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs';
-import { FaFolderOpen, FaUser } from 'react-icons/fa';
 import { HiDocumentText } from 'react-icons/hi';
-import { IoHomeSharp, IoMenuSharp } from 'react-icons/io5';
+import { IoHomeSharp, IoMenuSharp, IoBriefcaseSharp } from 'react-icons/io5';
 import { MdPhone } from 'react-icons/md';
 import Fade from 'react-reveal/Fade';
 import { ThemeContext } from '../../contexts/theme-context';
-import { headerData } from '../../data/header-data';
 import styles from '../../styles/navbar.module.css';
 import Link from '../link';
 
-function Navbar() {
+function Navbar({ title }) {
     const { theme, setHandleDrawer, changeTheme, isDark } = useContext(ThemeContext);
     const [open, setOpen] = useState(false);
     const handleDrawerOpen = () => {
@@ -25,19 +23,12 @@ function Navbar() {
         setHandleDrawer();
     };
 
-    const shortname = (name) => {
-        if (name.length > 12) {
-            return name.split(' ')[0];
-        } else {
-            return name;
-        }
-    };
 
     return (
         <div className={styles.navbar}>
             <div className={styles.navbarContainer}>
                 <h1 style={{ color: theme.primary }}>
-                    {shortname(headerData.name)}
+                    {title.toUpperCase()}
                 </h1>
 
                 <IoMenuSharp
@@ -97,7 +88,10 @@ function Navbar() {
 
                         <Fade left>
                             <Link
-                                href='/#resume'
+                                href='/Larina_Maskren_Resume.pdf'
+                                download='Larina_Maskren_Resume.pdf'
+                                target='_blank'
+                                rel='noopener noreferrer'
                             >
                                 <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
                                     <HiDocumentText
@@ -125,21 +119,6 @@ function Navbar() {
                             </div>
                         </Fade>
 
-                        {/* <Fade left>
-                            <Link
-                                href='/#blog'
-                            >
-                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
-                                    <FaFolderOpen
-                                        className="text-xl sm:text-2xl"
-                                    />
-                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
-                                        Blog
-                                    </span>
-                                </div>
-                            </Link>
-                        </Fade> */}
-
                         <Fade left>
                             <Link
                                 href='/#contacts'
@@ -148,6 +127,20 @@ function Navbar() {
                                     <MdPhone className="text-xl sm:text-2xl" />
                                     <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
                                         Contact
+                                    </span>
+                                </div>
+                            </Link>
+                        </Fade>
+                        <Fade left>
+                            <Link
+                                href='/project'
+                            >
+                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
+                                    <IoBriefcaseSharp
+                                        className="text-xl sm:text-2xl"
+                                    />
+                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                        Projects
                                     </span>
                                 </div>
                             </Link>

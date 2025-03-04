@@ -20,8 +20,9 @@ function Projects() {
                     </div>
                     <div className={styles.projectsBody}>
                         <div className={styles.projectsBodyContainer}>
-                            {projectsData.slice(0, 3).map(project => (
+                            {projectsData.slice(0, 4).map(project => (
                                 <SingleProject
+                                    className="projectCard"
                                     theme={theme}
                                     key={project.id}
                                     id={project.id}
@@ -35,7 +36,7 @@ function Projects() {
                             ))}
                         </div>
 
-                        {projectsData.length > 3 && (
+                        {projectsData.length > 4 && (
                             <div className={styles.projectsViewAll}>
                                 <Link href="/project">
                                     <button className="text-[#15202B] bg-[#8B98A5] hover:bg-[#1D9BF0] transition-colors">

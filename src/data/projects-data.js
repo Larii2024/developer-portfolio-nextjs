@@ -1,86 +1,76 @@
-import eight from '../assets/svg/projects/eight.svg'
-import five from '../assets/svg/projects/five.svg'
-import four from '../assets/svg/projects/four.svg'
-import one from '../assets/svg/projects/one.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import six from '../assets/svg/projects/six.svg'
-import three from '../assets/svg/projects/three.svg'
-import two from '../assets/svg/projects/two.svg'
-
+import ieee from '../assets/svg/projects/ieee.svg'
+import data from '../assets/svg/projects/data.svg'
+import beauty from '../assets/svg/projects/beauty.svg'
+import medical from '../assets/svg/projects/medical.svg'
+import restaurant from '../assets/svg/projects/restaurant.svg'
+import portfolio from '../assets/svg/projects/portfolio.svg'
+import ecomm from '../assets/svg/projects/ecomm.svg'
 
 export const projectsData = [
     {
         id: 1,
-        projectName: 'Ayla Networks',
-        projectDesc: 'This project about Simplifying the Development of Smart Home & IoT Solutions.',
-        tags: ['React', 'SAAS', 'React Bootstrap'],
-        code: '',
-        demo: 'https://www.aylanetworks.com/',
-        image: six
+        projectName: 'eArogya Portal',
+        projectDesc: 'An Electronic Health Record Management Portal built for the problem statement submitted by Ministry of Health and Family Welfare in the Smart India Hackathon 2020.',
+        tags: ['Embedded JS', 'JavaScript', 'React Native', 'Node.js'],
+        code: 'https://github.com/wei-b0/eAarogya-Portal-for-EHR-Management',
+        demo: 'https://www.youtube.com/watch?v=mlPB1FBxMQo',
+        image: medical
     },
     {
         id: 2,
-        projectName: 'Jewelry Niche',
-        projectDesc: 'This project is a Jewelry shop, Customer can be buy product and manage them and make payment.',
-        tags: ['React', 'Express', 'Material Ui'],
-        code: 'https://github.com/said7388/jewelry-niche',
-        demo: 'https://pandora-web.netlify.app/',
-        image: seven
+        projectName: 'Restaurant Web App',
+        projectDesc: 'My first ever full-stack web application using modern web technologies',
+        tags: ['React.js', 'Express.js', 'Node.js','MongoDB'],
+        code: 'https://github.com/KLS-Gogte-Institute-of-Technology-bgm/sd-lab-project-refactor-batch13',
+        demo: 'https://restaurant-management-system-d4c4ecff8ad0.herokuapp.com/home',
+        image: restaurant
     },
     {
         id: 3,
-        projectName: 'Travel Agency',
-        projectDesc: 'This project about travel agency management.',
-        tags: ['React', 'CSS', 'Material Ui'],
-        code: 'https://github.com/said7388/Travel-Agency-client',
-        demo: 'https://travel-agency-fc58b.web.app/',
-        image: eight
+        projectName: 'IEEE GIT Website',
+        projectDesc: 'A static HTML website built on the contest guidelines organized by IEEE-GIT',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+        code: 'https://github.com/Larii2024/IEEE_GIT-Website-Contest-Refactor',
+        demo: 'https://larii2024.github.io/IEEE_GIT-Website-Contest-Refactor/',
+        image: ieee
     },
-    {
+  {
         id: 4,
-        projectName: 'Android Patient Tracker',
-        projectDesc: 'This project involves the development of an Android application for viewing and managing patient data.',
-        tags: ['Flutter', 'Firebase'],
+        projectName: 'My Portfolio',
+        projectDesc: 'My online portfolio to enhance personal branding and showcase my capabilities ',
+        tags: ['Next.js', 'TailwindCSS', 'Node.js'],
         code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
         demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: four
+        image: portfolio
     },
     {
         id: 5,
-        projectName: 'E-Commerce App',
-        projectDesc: 'A Simple E-commerce application',
-        tags: ['React Native', 'Firebase'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: five
+        projectName: 'Clothing Store Website',
+        projectDesc: 'An ecommerce Web Application using basic web technology concepts',
+        tags: ['HTML', 'CSS', 'JavaScript'],
+        code: 'https://github.com/Larii2024/Cubiccode_Clothing_Store',
+        demo: 'https://larii2024.github.io/Cubiccode_Clothing_Store/',
+        image: ecomm
     },
     {
         id: 6,
-        projectName: 'Uber Lite',
-        projectDesc: 'Uber clone',
-        tags: ['Flutter'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: one
+        projectName: 'BeautyBliss Application',
+        projectDesc: 'A Service-Oriented Architecture project for a scalable website',
+        tags: ['React.js', 'Fastify', 'MongoDB', 'GCP','Git'],
+        code: 'https://github.com/Beauty-Bliss',
+        demo: '',
+        image: beauty
     },
     {
         id: 7,
-        projectName: 'Stock Market App',
-        projectDesc: 'A simple stock market API app',
-        tags: ['React', 'Redux', 'Bootstrap'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: two
-    },
-    {
-        id: 8,
-        projectName: 'Car Pooling System',
-        projectDesc: 'The carpooling system merges multiple people in a car which leads to meet new people, reduces pollution',
-        tags: ['Flutter', 'React'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: three
-    },
+        projectName: 'Genomic Selection Model',
+        projectDesc: 'Implemented and analyzed the performance of Genomic Selection models with Data Augmentation Techniques.',
+        tags: ['Python', 'Machine Learning'],
+        code: '',
+        demo: '',
+        image: data
+    }
+    
 ]
 
 

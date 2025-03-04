@@ -32,12 +32,19 @@
 
 .projectsBodyContainer {
   display: flex;
+  flex-wrap: wrap;
+  /* Allows items to wrap onto multiple lines */
   align-items: center;
   justify-content: center;
+  /* Adjust this as needed to space between or space around */
   gap: 4.5rem;
   width: 100%;
 }
-
+.projectCard {
+  width: calc(33.333% - 3rem);
+  /* Adjust the 3rem to reflect the total gap divided by 3 */
+  /* additional styling for the card */
+}
 .projectsViewAll {
   width: 100%;
   padding: 2rem;
@@ -72,6 +79,10 @@
     justify-content: center;
     width: 100%;
   }
+        .projectCard {
+          width: 100%;
+          /* Makes each card full width on smaller screens */
+        }
 }
 
 @media screen and (max-width: 800px) {

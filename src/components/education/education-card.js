@@ -12,7 +12,7 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
 
     return (
         <Fade bottom>
-            <div key={id} className={`${styles.educationCard} bg-[#1E2732]`} >
+            <div key={id} className={`${styles.educationCard}`} style={{ backgroundColor: theme.quaternary }}>
                 <div className={styles.educardImg} style={{ backgroundColor: theme.primary }}>
                     <Image src={theme.type === 'light' ? eduImgBlack : eduImgWhite} alt="" />
                 </div>

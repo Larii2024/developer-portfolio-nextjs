@@ -11,7 +11,7 @@ function HomePage() {
     <>
       <BackToTop />
       <ChangeTheme />
-      <Navbar />
+      <Navbar title='Larina'/>
       <Landing />
       <Experience />
       <Skills />
