@@ -7,10 +7,16 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "i.ibb.co",
+        protocol: 'https',
+        hostname: 'i.ibb.co',
       },
     ],
+  },
+
+  // Optional: Add custom Webpack configuration if needed
+  webpack: (config, { isServer }) => {
+    // Add custom Webpack configuration here if needed
+    return config;
   },
 };
 
