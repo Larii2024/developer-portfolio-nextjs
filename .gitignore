@@ -39,3 +39,4 @@ jspm_packages
 
 #Environment file for security
 .env
+.vercel
