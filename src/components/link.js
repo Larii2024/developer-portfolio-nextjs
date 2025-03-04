@@ -7,7 +7,6 @@ const Link = ({
   ...props
 }) => {
 
-  console.log(children);
   return (
     <NextLink href={href || ''} passHref legacyBehavior >
       <a {...props}>

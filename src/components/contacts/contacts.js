@@ -19,7 +19,6 @@ function Contacts() {
 
     const form = useRef();
     const { theme } = useContext(ThemeContext);
-    console.log(process.env);
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
             return;
@@ -28,7 +27,7 @@ function Contacts() {
     };
 
    const handleContactForm = (e) => {
-    e.preventDefault();
+       e.preventDefault();
 
     if (!name || !email || !message) {
         setErrMsg('Please fill in all fields');
@@ -41,8 +40,6 @@ function Contacts() {
         setOpen(true);
         return;
     }
-       console.log(form.current);
-
        setLoading(true);
     emailjs.sendForm(
         process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
@@ -88,7 +85,7 @@ function Contacts() {
                                 <input
                                     placeholder='John Doe'
                                     value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    onChange={(e) => { setName(e.target.value); setSuccess(false); }}
                                     type='text'
                                     name='user_name'
                                     className={`${styles.formInput}  
@@ -112,7 +109,7 @@ function Contacts() {
                                 <input
                                     placeholder='John@doe.com'
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={(e) => { setEmail(e.target.value); setSuccess(false); }}
                                     type='email'
                                     name='user_email'
                                     className={`${styles.formInput}  
@@ -136,7 +133,7 @@ function Contacts() {
                                 <textarea
                                     placeholder='Type your message....'
                                     value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
+                                    onChange={(e) => { setMessage(e.target.value); setSuccess(false); }}
                                     type='text'
                                     name='message'
                                     className={`${styles.formMessage} 

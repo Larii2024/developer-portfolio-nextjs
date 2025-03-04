@@ -103,22 +103,21 @@ function Navbar({ title }) {
                                 </div>
                             </Link>
                         </Fade>
-
-                        <Fade left>
-                            <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors" onClick={changeTheme}>
-                                {isDark ?
-                                    <BsFillSunFill className="text-xl sm:text-2xl" />
-                                    :
-                                    <BsFillMoonFill className="text-xl sm:text-2xl" />
-                                }
-                                <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
-                                    {
-                                        isDark ? "Light" : "Dark"
-                                    }
-                                </span>
-                            </div>
+                         <Fade left>
+                            <Link
+                                href='/project'
+                            >
+                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
+                                    <IoBriefcaseSharp
+                                        className="text-xl sm:text-2xl"
+                                    />
+                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                        Projects
+                                    </span>
+                                </div>
+                            </Link>
                         </Fade>
-
+                        
                         <Fade left>
                             <Link
                                 href='/#contacts'
@@ -132,18 +131,18 @@ function Navbar({ title }) {
                             </Link>
                         </Fade>
                         <Fade left>
-                            <Link
-                                href='/project'
-                            >
-                                <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors">
-                                    <IoBriefcaseSharp
-                                        className="text-xl sm:text-2xl"
-                                    />
-                                    <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
-                                        Projects
-                                    </span>
-                                </div>
-                            </Link>
+                            <div className="my-[2em] mx-auto rounded-[78.8418px] text-[#1D9BF0] bg-[#15202B] sm:w-[85%] w-[100%] h-[55px] sm:h-[60px] flex items-center justify-evenly px-[25px] sm:px-[30px] box-border border-2 border-[#1D9BF0] hover:text-[#15202B] hover:bg-[#1D9BF0] transition-colors" onClick={changeTheme}>
+                                {isDark ?
+                                    <BsFillSunFill className="text-xl sm:text-2xl" />
+                                    :
+                                    <BsFillMoonFill className="text-xl sm:text-2xl" />
+                                }
+                                <span className="w-6/12 text-[1.125rem] sm:text-[1.3rem] font-semibold">
+                                    {
+                                        isDark ? "Light" : "Dark"
+                                    }
+                                </span>
+                            </div>
                         </Fade>
                     </div>
                 </div>

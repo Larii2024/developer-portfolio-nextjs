@@ -24,11 +24,11 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     </h2>
                     <Image src={image ? image : placeholder} alt={name} />
                     <div className={styles.projectShowcaseBtn}>
-                        <a
+                        {demo != '' && (<a
                             href={demo}
                             target='_blank'
                             rel='noreferrer'
-                            className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
+                            className={`flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[${theme.tertiary}] hover:border-[#15202B] text-[${theme.tertiary}] hover:text-[#1D9BF0] transition hover:scale-[1.1]`}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -42,12 +42,12 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 className="text-[1.1rem] transition"
                                 aria-label='Demo'
                             />
-                        </a>
-                        <a
+                        </a>)}
+                        {code != '' && (<a
                             href={code}
                             target='_blank'
                             rel='noreferrer'
-                            className="flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[#EFF3F4] hover:border-[#15202B] text-[#EFF3F4] hover:text-[#1D9BF0] transition hover:scale-[1.1]"
+                            className={`flex items-center justify-center w-[40px] h-[40px] rounded-[50px] border-2 border-[${theme.tertiary}] hover:border-[#15202B] text-[${theme.tertiary}] hover:text-[#1D9BF0] transition hover:scale-[1.1]`}
                             aria-labelledby={`${name
                                 .replace(' ', '-')
                                 .toLowerCase()} ${name
@@ -61,7 +61,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 className="text-[1.1rem] transition"
                                 aria-label='Code'
                             />
-                        </a>
+                        </a>)}
                     </div>
                 </div>
                 <p
