@@ -1,4 +1,3 @@
-export { default as About } from './about/about'
 export { default as BackToTop } from './back-to-top/back-to-top'
 export { default as Blog } from './blog/blog'
 export { default as SingleBlog } from './blog/blog-card/blog-card'
