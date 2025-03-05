@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/globals.css';
 import { Contacts, Education,
   Experience, Landing, Navbar, Projects, Skills
 } from '../components';
