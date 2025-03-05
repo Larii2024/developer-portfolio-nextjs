@@ -12,12 +12,5 @@ export const educationData = [
         course: 'Bachelor of Engineering in computer Science',
         startYear: 'Aug 2018',
         endYear: 'Jul 2022'
-    },
-    {
-        id: 3,
-        institution: 'KLE Independent PU College',
-        course: 'Secondary School',
-        startYear: 'June 2016',
-        endYear: 'May 2018'
-    },
+    }
 ]
