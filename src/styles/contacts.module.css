@@ -23,7 +23,7 @@
   padding: 2rem 6rem 3rem;
   width: 80%;
   height: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .contactsContainer > h1 {
@@ -92,25 +92,35 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  /* Center content horizontally */
   cursor: pointer;
+  gap: 8px;
+  /* Add gap between text and icon */
 }
 
 .submitBtn button p {
   font-size: 16px;
   font-family: var(--primaryFont);
+  margin: 0;
+  /* Remove default margin */
 }
 
 .submitIcon {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
 }
+
 .sendIcon {
   font-size: 25px;
   transform-origin: center;
   transform: translate(5px, -3px) rotate(-30deg);
+}
+
+.successIcon {
+  font-size: 28px;
+  transition: all 0.3s 0.8s ease-in-out;
 }
 
 .successIcon {

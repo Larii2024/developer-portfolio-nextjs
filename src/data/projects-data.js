@@ -58,7 +58,7 @@ export const projectsData = [
         projectDesc: 'A Service-Oriented Architecture project for a scalable website',
         tags: ['React.js', 'Fastify', 'MongoDB', 'GCP','Git'],
         code: 'https://github.com/Beauty-Bliss',
-        demo: '/',
+        demo: 'https://github.com/Beauty-Bliss',
         image: beauty
     },
     {

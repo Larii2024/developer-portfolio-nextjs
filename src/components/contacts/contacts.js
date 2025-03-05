@@ -68,7 +68,7 @@ function Contacts() {
             style={{ backgroundColor: theme.secondary }}
         >
             <div className={styles.contactsContainer}>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
+                <h1 style={{ color: theme.primary }}>Get In Touch</h1>
                 <div className={styles.contactsBody}>
                     <div className={styles.contactsForm}>
                         <form ref={form} onSubmit={handleContactForm}>
@@ -145,30 +145,30 @@ function Contacts() {
                             </div>
 
                             <div className={styles.submitBtn}>
-                                <button
-                                    type='submit'
-                                    className="bg-[#1D9BF0] hover:bg-[#8B98A5] text-[#15202B] transition delay-200"
-                                    disabled={loading}
-                                >
-                                    <p>{loading ? 'Sending...' : success ? 'Sent' : 'Send'}</p>
-                                    <div className={styles.submitIcon}>
-                                        <AiOutlineSend
-                                            className={styles.sendIcon}
-                                            style={{
-                                                animation: !success ? 'initial' : 'fly 0.8s linear both',
-                                                display: !success ? 'inline-flex' : 'none',
-                                            }}
-                                        />
-                                        <AiOutlineCheckCircle
-                                            className={styles.successIcon}
-                                            style={{
-                                                display: !success ? 'none' : 'inline-flex',
-                                                opacity: !success ? '0' : '1',
-                                            }}
-                                        />
-                                    </div>
-                                </button>
-                            </div>
+  <button
+    type='submit'
+    className="bg-[#1D9BF0] hover:bg-[#8B98A5] text-[#15202B] transition delay-200"
+    disabled={loading}
+  >
+    <p>{loading ? 'Sending...' : success ? 'Sent' : 'Send'}</p>
+    <div className={styles.submitIcon}>
+      <AiOutlineSend
+        className={styles.sendIcon}
+        style={{
+          animation: !success ? 'initial' : 'fly 0.8s linear both',
+          display: !success ? 'inline-flex' : 'none',
+        }}
+      />
+      <AiOutlineCheckCircle
+        className={styles.successIcon}
+        style={{
+          display: !success ? 'none' : 'inline-flex',
+          opacity: !success ? '0' : '1',
+        }}
+      />
+    </div>
+  </button>
+</div>
                         </form>
                         <Snackbar
                             anchorOrigin={{
