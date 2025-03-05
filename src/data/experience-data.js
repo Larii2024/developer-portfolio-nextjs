@@ -17,7 +17,7 @@ export const experienceData = [
         id: 3,
         company: 'Falabella India',
         jobtitle: 'Associate Software Engineer',
-        startYear: 'August 2022',
+        startYear: 'Aug 2022',
         endYear: 'Mar 2023'
     },
     {

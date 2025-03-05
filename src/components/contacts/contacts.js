@@ -194,7 +194,7 @@ function Contacts() {
                                 }
                                 style={{
                                     backgroundColor: theme.primary,
-                                    color: theme.secondary,
+                                    color: theme.tertiary,
                                     fontFamily: 'var(--primaryFont)',
                                 }}
                                 message={errMsg}
