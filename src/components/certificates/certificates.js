@@ -14,7 +14,7 @@ function Certificates() {
             <Container className={styles.experience} id="experience">
                 <div className={styles.experienceBody}>
                     <div className={styles.experienceDescription} id="fullProjects">
-                        <h1 style={{ color: theme.primary }}>Experience</h1>
+                        <h1 style={{ color: theme.primary }}>Certificates</h1>
                             {certificateData.map(exp => (
                                 <CertificateCard
                                     key={exp.id}

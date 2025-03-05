@@ -66,8 +66,8 @@ export const projectsData = [
         projectName: 'Genomic Selection Model',
         projectDesc: 'Implemented and analyzed the performance of Genomic Selection models with Data Augmentation Techniques.',
         tags: ['Python', 'Machine Learning'],
-        code: '/',
-        demo: '/',
+        code: '',
+        demo: '',
         image: data
     }
     
