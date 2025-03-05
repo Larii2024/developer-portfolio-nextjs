@@ -32,10 +32,12 @@ function Navbar({ title }) {
                 </h1>
 
                 <IoMenuSharp
-                    className={`text-3xl md:text-4xl text-[${theme.tertiary}] cursor-pointer translate-y-3 xs:text-2xl transition-colors hover:text-[${theme.primary}] `}
-                    onClick={handleDrawerOpen}
-                    aria-label='Menu'
-                />
+    className="cursor-pointer translate-y-3 transition-colors"
+    style={{ fontSize: '30px', color: theme.tertiary }}
+    onClick={handleDrawerOpen}
+    aria-label='Menu'
+/>
+
             </div>
             <Drawer
                 variant='temporary'
