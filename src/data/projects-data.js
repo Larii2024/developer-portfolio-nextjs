@@ -27,24 +27,6 @@ export const projectsData = [
     },
     {
         id: 3,
-        projectName: 'IEEE GIT Website',
-        projectDesc: 'A static HTML website built on the contest guidelines organized by IEEE-GIT',
-        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        code: 'https://github.com/Larii2024/IEEE_GIT-Website-Contest-Refactor',
-        demo: 'https://larii2024.github.io/IEEE_GIT-Website-Contest-Refactor/',
-        image: ieee
-    },
-    {
-        id: 4,
-        projectName: 'Clothing Store Website',
-        projectDesc: 'An ecommerce Web Application using basic web technology concepts',
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        code: 'https://github.com/Larii2024/Cubiccode_Clothing_Store',
-        demo: 'https://larii2024.github.io/Cubiccode_Clothing_Store/',
-        image: ecomm
-    },
-  {
-        id: 5,
         projectName: 'My Portfolio',
         projectDesc: 'My online portfolio to enhance personal branding and showcase my capabilities ',
         tags: ['Next.js', 'TailwindCSS', 'Node.js'],
@@ -53,7 +35,17 @@ export const projectsData = [
         image: portfolio
     },
     {
-        id: 6,
+        id: 4,
+        projectName: 'IEEE GIT Website',
+        projectDesc: 'A static HTML website built on the contest guidelines organized by IEEE-GIT',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+        code: 'https://github.com/Larii2024/IEEE_GIT-Website-Contest-Refactor',
+        demo: 'https://larii2024.github.io/IEEE_GIT-Website-Contest-Refactor/',
+        image: ieee
+    },
+  
+    {
+        id: 5,
         projectName: 'BeautyBliss Application',
         projectDesc: 'A Service-Oriented Architecture project for a scalable website',
         tags: ['React.js', 'Fastify', 'MongoDB', 'GCP','Git'],
@@ -62,7 +54,7 @@ export const projectsData = [
         image: beauty
     },
     {
-        id: 7,
+        id: 6,
         projectName: 'Genomic Selection Model',
         projectDesc: 'Implemented and analyzed the performance of Genomic Selection models with Data Augmentation Techniques.',
         tags: ['Python', 'Machine Learning'],
