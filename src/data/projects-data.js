@@ -42,25 +42,6 @@ export const projectsData = [
         code: 'https://github.com/Larii2024/IEEE_GIT-Website-Contest-Refactor',
         demo: 'https://larii2024.github.io/IEEE_GIT-Website-Contest-Refactor/',
         image: ieee
-    },
-  
-    {
-        id: 5,
-        projectName: 'BeautyBliss Application',
-        projectDesc: 'A Service-Oriented Architecture project for a scalable website',
-        tags: ['React.js', 'Fastify', 'MongoDB', 'GCP','Git'],
-        code: 'https://github.com/Beauty-Bliss',
-        demo: 'https://github.com/Beauty-Bliss',
-        image: beauty
-    },
-    {
-        id: 6,
-        projectName: 'Genomic Selection Model',
-        projectDesc: 'Implemented and analyzed the performance of Genomic Selection models with Data Augmentation Techniques.',
-        tags: ['Python', 'Machine Learning'],
-        code: '',
-        demo: '',
-        image: data
     }
     
 ]
