@@ -55,7 +55,7 @@
 }
 
 .singleProject:hover .projectShowcaseBtn a {
-  transform: translateX(-140px) scale(1.1) !important;
+  transform: translateX(-100px) scale(1.1) !important;
 }
 
 .singleProject .projectDesc {
