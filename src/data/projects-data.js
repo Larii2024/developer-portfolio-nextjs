@@ -9,24 +9,15 @@ import ecomm from '../assets/svg/projects/ecomm.svg'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'eArogya Portal',
-        projectDesc: 'An Electronic Health Record Management Portal built for the problem statement submitted by Ministry of Health and Family Welfare in the SIH 2020',
-        tags: ['Embedded JS', 'JavaScript', 'React Native', 'Node.js'],
-        code: 'https://github.com/wei-b0/eAarogya-Portal-for-EHR-Management',
-        demo: 'https://www.youtube.com/watch?v=mlPB1FBxMQo',
-        image: medical
+        projectName: 'Organogram',
+        projectDesc: 'An organization chart to view hierarchy and salary metrics of 40K Employees',
+        tags: ['Vue.js', 'TailwindCSS', 'Node.js'],
+        code: 'https://xyjp6w-5173.csb.app/',
+        demo: '/',
+        image: data
     },
     {
         id: 2,
-        projectName: 'Restaurant Web App',
-        projectDesc: 'My first ever full-stack web application using modern web technologies',
-        tags: ['React.js', 'Express.js', 'Node.js','MongoDB'],
-        code: 'https://github.com/KLS-Gogte-Institute-of-Technology-bgm/sd-lab-project-refactor-batch13',
-        demo: 'https://restaurant-management-system-d4c4ecff8ad0.herokuapp.com/home',
-        image: restaurant
-    },
-    {
-        id: 3,
         projectName: 'My Portfolio',
         projectDesc: 'My online portfolio to enhance personal branding and showcase my capabilities ',
         tags: ['Next.js', 'TailwindCSS', 'Node.js'],
@@ -35,15 +26,23 @@ export const projectsData = [
         image: portfolio
     },
     {
+        id: 3,
+        projectName: 'eArogya Portal',
+        projectDesc: 'An Electronic Health Record Management Portal built for the problem statement submitted by Ministry of Health and Family Welfare in the SIH 2020',
+        tags: ['Embedded JS', 'JavaScript', 'React Native', 'Node.js'],
+        code: 'https://github.com/wei-b0/eAarogya-Portal-for-EHR-Management',
+        demo: 'https://www.youtube.com/watch?v=mlPB1FBxMQo',
+        image: medical
+    },
+    {
         id: 4,
-        projectName: 'IEEE GIT Website',
-        projectDesc: 'A static HTML website built on the contest guidelines organized by IEEE-GIT',
-        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        code: 'https://github.com/Larii2024/IEEE_GIT-Website-Contest-Refactor',
-        demo: 'https://larii2024.github.io/IEEE_GIT-Website-Contest-Refactor/',
-        image: ieee
-    }
-    
+        projectName: 'Restaurant Web App',
+        projectDesc: 'My first ever full-stack web application using modern web technologies',
+        tags: ['React.js', 'Express.js', 'Node.js','MongoDB'],
+        code: 'https://github.com/KLS-Gogte-Institute-of-Technology-bgm/sd-lab-project-refactor-batch13',
+        demo: 'https://restaurant-management-system-d4c4ecff8ad0.herokuapp.com/home',
+        image: restaurant
+    },
 ]
 
 
