@@ -12,8 +12,8 @@ export const projectsData = [
         projectName: 'Organogram',
         projectDesc: 'An organization chart to view hierarchy and salary metrics of 40K Employees',
         tags: ['Vue.js', 'TailwindCSS', 'Node.js'],
-        code: 'https://xyjp6w-5173.csb.app/',
-        demo: '/',
+        code: '',
+        demo: 'https://xyjp6w-5173.csb.app/',
         image: data
     },
     {
@@ -21,7 +21,7 @@ export const projectsData = [
         projectName: 'My Portfolio',
         projectDesc: 'My online portfolio to enhance personal branding and showcase my capabilities ',
         tags: ['Next.js', 'TailwindCSS', 'Node.js'],
-        code: 'https://github.com/Larii2024/developer-portfolio-nextjs',
+        code: '',
         demo: '/',
         image: portfolio
     },
@@ -30,8 +30,8 @@ export const projectsData = [
         projectName: 'eArogya Portal',
         projectDesc: 'An Electronic Health Record Management Portal built for the problem statement submitted by Ministry of Health and Family Welfare in the SIH 2020',
         tags: ['Embedded JS', 'JavaScript', 'React Native', 'Node.js'],
-        code: 'https://github.com/wei-b0/eAarogya-Portal-for-EHR-Management',
-        demo: 'https://www.youtube.com/watch?v=mlPB1FBxMQo',
+        code: '',
+        demo: 'https://github.com/wei-b0/eAarogya-Portal-for-EHR-Management',
         image: medical
     },
     {
@@ -39,7 +39,7 @@ export const projectsData = [
         projectName: 'Restaurant Web App',
         projectDesc: 'My first ever full-stack web application using modern web technologies',
         tags: ['React.js', 'Express.js', 'Node.js','MongoDB'],
-        code: 'https://github.com/KLS-Gogte-Institute-of-Technology-bgm/sd-lab-project-refactor-batch13',
+        code: '',
         demo: 'https://restaurant-management-system-d4c4ecff8ad0.herokuapp.com/home',
         image: restaurant
     },
