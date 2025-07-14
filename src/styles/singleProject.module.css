@@ -54,7 +54,7 @@
   transition: transform 0.5s 0.3s;
 }
 
-.singleProject:hover .projectShowcaseBtn a:nth-child(2) {
+.singleProject:hover .projectShowcaseBtn a {
   transform: translateX(-140px) scale(1.1) !important;
 }
 
