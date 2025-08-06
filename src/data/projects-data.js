@@ -36,11 +36,11 @@ export const projectsData = [
     },
     {
         id: 4,
-        projectName: 'Restaurant Web App',
-        projectDesc: 'My first ever full-stack web application using modern web technologies',
-        tags: ['React.js', 'Express.js', 'Node.js','MongoDB'],
+        projectName: 'SOA Web App',
+        projectDesc: 'Beauty Products App with service-oriented-architecture that includes microservices and a service registry',
+        tags: ['React.js', 'Express.js', 'Node.js','MongoDB','Python',],
         code: '',
-        demo: 'https://restaurant-management-system-d4c4ecff8ad0.herokuapp.com/home',
+        demo: 'https://github.com/Beauty-Bliss',
         image: restaurant
     },
 ]

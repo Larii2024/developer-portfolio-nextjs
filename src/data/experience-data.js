@@ -30,7 +30,7 @@ export const experienceData = [
     {
         id: 5,
         company: '5to9 Ventures Corp.',
-        jobtitle: 'Software Developer Intern',
+        jobtitle: 'Software Consultant',
         startYear: 'Dec 2020',
         endYear: 'Dec 2021'
     }, 
