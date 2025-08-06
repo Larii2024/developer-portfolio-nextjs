@@ -41,7 +41,7 @@ export const projectsData = [
         tags: ['React.js', 'Express.js', 'Node.js','MongoDB','Python',],
         code: '',
         demo: 'https://github.com/Beauty-Bliss',
-        image: restaurant
+        image: beauty
     },
 ]
 
